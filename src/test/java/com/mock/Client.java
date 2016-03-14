@@ -3,9 +3,9 @@ package com.mock;
 import com.async.AsyncQuoter;
 import com.async.AsyncQuoterStarter;
 import com.async.Quoter;
-import com.cpic.service.CpicService;
-import com.picc.service.PiccService;
-import com.pingan.service.PinganService;
+import com.biz1.service.Biz1Service;
+import com.biz2.service.Biz2Service;
+import com.biz3.service.Biz3Service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,13 +19,13 @@ public class Client {
 
     public static void main(String[] args) {
 
-//                new PinganService().quote(new Object());
-//                new PiccService().quote(new Object());
-//                new CpicService().quote(new Object());
+//                new Biz3Service().quote(new Object());
+//                new Biz2Service().quote(new Object());
+//                new Biz1Service().quote(new Object());
         Quoter[] quoters = {
-                new Quoter().setQuoteService(new PinganService()),
-                new Quoter().setQuoteService(new PiccService()),
-                new Quoter().setQuoteService(new CpicService())
+                new Quoter().setQuoteService(new Biz3Service()),
+                new Quoter().setQuoteService(new Biz2Service()),
+                new Quoter().setQuoteService(new Biz1Service())
         };
         List<AsyncQuoter> asyncQuoters = new ArrayList<>();
         for (Quoter quoter : quoters) {
