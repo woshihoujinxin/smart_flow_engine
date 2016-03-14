@@ -1,0 +1,23 @@
+[
+  "step1",
+  {
+    "true": [
+      "step2",
+      "step3",
+      {
+        "true": [
+          "step2",
+          "step3"
+        ],
+        "false": [
+          "step3",
+          "step3"
+        ]
+      }
+    ],
+    "false": [
+      "step3",
+      "step3"
+    ]
+  }
+]
